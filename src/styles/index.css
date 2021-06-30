@@ -12,8 +12,17 @@
   }
 
   a {
-    @apply text-primary-500 hover:text-primary-600 focus:text-primary-700 hover:underline focus:underline;
+    @apply text-primary-500 hover:text-primary-600 focus:text-primary-700 hover:underline focus:underline; color:blue;
   }
+
+  .border-b.px-3.py-2 a {
+    color:black;
+  }
+
+  .border-b.px-3.py-2 a:hover {
+    color:blue;
+  }
+
 }
 
 @layer components {
