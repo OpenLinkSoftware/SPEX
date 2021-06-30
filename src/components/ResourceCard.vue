@@ -7,10 +7,10 @@
     >
       <a :href="resource.id">
         <h3 class="font-bold">
-        <TermTooltip :label="resource.id">
-          {{ resource.name }}
-        </TermTooltip>
-      </h3>
+          <TermTooltip :label="resource.id">
+            {{ resource.name }}
+          </TermTooltip>
+        </h3>
       </a>
       <span class="flex flex-nowrap">
         <slot name="actions" />
