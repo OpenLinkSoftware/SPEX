@@ -34,11 +34,13 @@
         </th>
         <td class="border-b px-3 py-2">
           <div v-for="value in property.values" :key="value.id">
+          <a>
             <slot name="property-value" :value="value">
               <TermTooltip :label="value.id">
                 {{ value.name }}
               </TermTooltip>
             </slot>
+          </a>
           </div>
         </td>
       </tr>
