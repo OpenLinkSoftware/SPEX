@@ -5,11 +5,13 @@
       @mouseenter="$emit('hover-title', resource)"
       @mouseleave="$emit('unhover-title', resource)"
     >
-      <h3 class="font-bold">
+      <a :href="resource.id">
+        <h3 class="font-bold">
         <TermTooltip :label="resource.id">
           {{ resource.name }}
         </TermTooltip>
       </h3>
+      </a>
       <span class="flex flex-nowrap">
         <slot name="actions" />
       </span>
@@ -24,9 +26,11 @@
         @mouseleave="$emit('unhover-property', resource, property)"
       >
         <th class="border-b px-3 py-2">
+        <a :href="property.id">
           <TermTooltip :label="property.id">
             {{ property.name }}
           </TermTooltip>
+        </a>
         </th>
         <td class="border-b px-3 py-2">
           <div v-for="value in property.values" :key="value.id">
